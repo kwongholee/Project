@@ -1,7 +1,7 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Container, Nav, Navbar, NavDropdown} from 'react-bootstrap'
-import { Routes } from 'react-router-dom';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 
 import Introduce from './routes/Introduce';
 import Profile from './routes/Profile';
@@ -10,17 +10,20 @@ import Login from './routes/Login';
 import Signup from './routes/Signup';
 import List from './routes/List';
 import Feed from './routes/Feed';
+import bg from './img/introduce1.png';
 
 function App() {
+  var navigate = useNavigate();
+
   return (
     <div className="App">
       <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="/">Kwongho's Blog</Navbar.Brand>
+          <Navbar.Brand onClick={() => {navigate('/')}}>Kwongho's Blog</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="/">홈</Nav.Link>
-            <Nav.Link href="/introduce">소개</Nav.Link>
-            <Nav.Link href="/list">게시판</Nav.Link>
+            <Nav.Link onClick={() => {navigate('/')}}>홈</Nav.Link>
+            <Nav.Link onClick={() => {navigate('/introduce')}}>소개</Nav.Link>
+            <Nav.Link onClick={() => {navigate('/list')}}>게시판</Nav.Link>
           </Nav>
           <Nav>
             <Nav.Link href="/login">로그인</Nav.Link>
