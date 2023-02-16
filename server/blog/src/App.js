@@ -10,6 +10,8 @@ import Login from './routes/Login';
 import Signup from './routes/Signup';
 import List from './routes/List';
 import Feed from './routes/Feed';
+import Chat from './routes/Chat';
+
 import bg from './img/introduce1.png';
 
 function App() {
@@ -24,6 +26,7 @@ function App() {
             <Nav.Link onClick={() => {navigate('/')}}>홈</Nav.Link>
             <Nav.Link onClick={() => {navigate('/introduce')}}>소개</Nav.Link>
             <Nav.Link onClick={() => {navigate('/list')}}>게시판</Nav.Link>
+            <Nav.Link onClick={() => {navigate('/chat')}}>채팅창</Nav.Link>
           </Nav>
           <Nav>
             <Nav.Link href="/login">로그인</Nav.Link>
@@ -47,6 +50,8 @@ function App() {
         <Route path='/signup' element={<Signup />} />
 
         <Route path='/write' element={<Write />} />
+
+        <Route path='/chat' element={<Chat />} />
       </Routes>
     </div>
   );
