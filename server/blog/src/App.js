@@ -1,6 +1,6 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Container, Nav, Navbar, NavDropdown} from 'react-bootstrap'
+import {Button, Card, CardGroup, Container, Nav, Navbar, NavDropdown} from 'react-bootstrap'
 import { Route, Routes, useNavigate } from 'react-router-dom';
 
 import Introduce from './routes/Introduce';
@@ -11,6 +11,7 @@ import Signup from './routes/Signup';
 import List from './routes/List';
 import Feed from './routes/Feed';
 import Chat from './routes/Chat';
+import CardList from './routes/CardList';
 
 import bg from './img/introduce1.png';
 
@@ -35,7 +36,7 @@ function App() {
       </Navbar>
 
       <Routes>
-        <Route path='/' element={<></>} />
+        <Route path='/' element={<CardList />} />
 
         <Route path='/feed/?writer=id/?_id:_id' element={<Feed />} />
 
