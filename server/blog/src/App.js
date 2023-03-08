@@ -28,6 +28,8 @@ function App() {
             <Nav.Link onClick={() => {navigate('/introduce')}}>소개</Nav.Link>
             <Nav.Link onClick={() => {navigate('/list')}}>게시판</Nav.Link>
             <Nav.Link onClick={() => {navigate('/chat')}}>채팅창</Nav.Link>
+            <Nav.Link onClick={() => {navigate('/write')}}>글쓰기</Nav.Link>
+            <Nav.Link onClick={() => {navigate('/profile')}}>개인프로필</Nav.Link>
           </Nav>
           <Nav>
             <Nav.Link href="/login">로그인</Nav.Link>
@@ -40,7 +42,11 @@ function App() {
 
         <Route path='/feed/?writer=id/?_id:_id' element={<Feed />} />
 
-        <Route path='/introduce' element={<Introduce />} />
+        <Route path='/introduce' element={<Introduce />}>
+          <Route path='profile' element={<div>profile</div>}/>
+          <Route path='write' element={<>write</>}/>
+          <Route path='feed' element={<>feed</>}/>
+        </Route>
 
         <Route path='/list' element={<List />} />
 
