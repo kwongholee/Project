@@ -42,11 +42,11 @@ function App() {
 
         <Route path='/feed/?writer=id/?_id:_id' element={<Feed />} />
 
-        <Route path='/introduce' element={<Introduce />}>
-          <Route path='profile' element={<div>profile</div>}/>
-          <Route path='write' element={<>write</>}/>
-          <Route path='feed' element={<>feed</>}/>
-        </Route>
+        <Route path='/introduce' element={<Introduce />} />
+
+        <Route path='/introduce/profile' element={<div>profile</div>}/>
+        <Route path='/introduce/write' element={<>write</>}/>
+        <Route path='/introduce/feed' element={<>feed</>}/>
 
         <Route path='/list' element={<List />} />
 

@@ -70,14 +70,14 @@
 }
 
 .sideImage {
-  width: 300px;
-  height: 200px;
+  width: 500px;
+  height: 400px;
 }
 
-#reactImage {
+.rightImage {
   float: right;
 }
 
-#nodeImage {
-  float: right;
+.leftImage {
+  float: left;
 }
